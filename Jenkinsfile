@@ -15,7 +15,7 @@ pipeline{
         }
         stage('sub-job2'){
           steps{
-            sh 'bash cpustats.sh'
+            sh 'bash /var/lib/jenkins/workspace/Parallel Jenkins-CI-CD/system.sh'
           }
         }
       }
