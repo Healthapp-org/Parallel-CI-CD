@@ -15,7 +15,7 @@ pipeline{
         }
         stage('sub-job2'){
           steps{
-            echo 'action2'
+            sh 'cpustats.sh'
           }
         }
       }
