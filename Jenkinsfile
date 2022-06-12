@@ -27,7 +27,7 @@ pipeline{
         }
         stage('sub-job4'){
           steps{
-            sh 'bash /var/lib/jenkins/workspace/Parallel Jenkins-CI-CD/system.sh'
+            sh 'uptime'
             sh 'ls-lrth'
           }
         }
