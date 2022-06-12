@@ -16,7 +16,6 @@ pipeline{
         stage('sub-job2'){
           steps{
             sh 'lscpu'
-            sh 'lsblk'
           }
         }
         stage('sub-job3'){
@@ -27,6 +26,11 @@ pipeline{
         stage('sub-job4'){
           steps{
             sh 'ps -ef'
+          }
+        }
+        stage('sub-job3'){
+          steps{
+            sh 'lsblk'
           }
         }
       }
