@@ -41,8 +41,10 @@ pipeline{
     	steps{
     		sh 'cat /etc/passwd'
         sh 'ls -l'
+      }
+    }
     	}
     }
   }
 }
-      }
+      
