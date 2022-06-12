@@ -1,4 +1,4 @@
-pipeline{
+peline{
   agent any
   stages{
   	stage('version-control'){
@@ -13,15 +13,23 @@ pipeline{
             echo 'simpletest.sh'
           }
         }
-        stage('parallel-job'){
-         parallel{
-           stage('sub-job1'){
-            steps{
-              sh 'lscpu'
-              sh 'lsblk'
-          }
-        }    
+    stage('parallel-job'){
+      parallel{
         stage('sub-job2'){
+          steps{
+            sh 'lscpu'
+            sh 'lsblk'
+          }
+        }
+    stage('parallel-job'){
+      parallel{
+        stage('sub-job3'){
+          steps{
+            sh 'uptime'
+            sh 'ps -ef'
+          }
+        }        
+        stage('sub-job4'){
           steps{
             sh 'bash /var/lib/jenkins/workspace/Parallel Jenkins-CI-CD/system.sh'
           }
@@ -31,7 +39,7 @@ pipeline{
     stage('codebuild'){
     	steps{
     		sh 'cat /etc/passwd'
-        sh 'ls -la'
+        sh 'ls -l'
     	}
     }
   }
