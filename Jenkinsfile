@@ -28,7 +28,7 @@ pipeline{
             sh 'ps -ef'
           }
         }
-        stage('sub-job3'){
+        stage('sub-job5'){
           steps{
             sh 'lsblk'
           }
@@ -38,7 +38,7 @@ pipeline{
     stage('codebuild'){
     	steps{
     		sh 'cat /etc/passwd'
-            sh 'ls -l'
+        sh 'ls -l'
     	}
     }
   }
